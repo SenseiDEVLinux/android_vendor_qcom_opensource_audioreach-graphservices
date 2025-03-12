@@ -6,6 +6,7 @@ LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/api
 LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_HEADER_LIBRARY)
 
+ifneq ($(QCPATH),)
 include $(CLEAR_VARS)
 
 #----------------------------------------------------------------------------
@@ -94,3 +95,4 @@ LOCAL_SHARED_LIBRARIES += libcutils
 LOCAL_HEADER_LIBRARIES += vendor_common_inc
 
 include $(BUILD_SHARED_LIBRARY)
+endif
