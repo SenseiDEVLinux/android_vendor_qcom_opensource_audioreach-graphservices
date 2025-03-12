@@ -61,6 +61,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 endif
 
+ifneq ($(QCPATH),)
 include $(CLEAR_VARS)
 
 #----------------------------------------------------------------------------
@@ -152,6 +153,8 @@ LOCAL_EXPORT_C_INCLUDE_DIRS += $(LOCAL_PATH)/ats/adie/common/api
 LOCAL_EXPORT_C_INCLUDE_DIRS += $(LOCAL_PATH)/ats/mcs/common/api
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
 
 include $(CLEAR_VARS)
 
