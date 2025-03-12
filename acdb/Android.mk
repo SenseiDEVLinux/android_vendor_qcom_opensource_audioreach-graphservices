@@ -1,4 +1,5 @@
 LOCAL_PATH := $(call my-dir)
+ifneq ($(QCPATH),)
 include $(CLEAR_VARS)
 
 #----------------------------------------------------------------------------
@@ -57,6 +58,8 @@ LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/api
 LOCAL_EXPORT_C_INCLUDE_DIRS += $(LOCAL_PATH)/inc
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
 
 include $(CLEAR_VARS)
 
